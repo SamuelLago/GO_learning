@@ -17,4 +17,8 @@ func main() {
 		fmt.Printf("%v (CPF: %v)\n", nome, cpf)
 	}
 
+	fmt.Println(aprovados[54363732576])
+	delete(aprovados, 54363732576)
+	fmt.Println(aprovados[54363732576])
+
 }
