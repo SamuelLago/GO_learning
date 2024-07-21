@@ -107,6 +107,14 @@ func buscaArray(array1 [10]int, num int) string { //Ex.11
 	return "Nao encontrado"
 }
 
+func inverteArray(array1 [10]int) [10]int { //Ex.12
+	var array2 [10]int
+	for i := 0; i < len(array1); i++ {
+		array2[len(array1)-1-i] = array1[i]
+	}
+	return array2
+}
+
 func main() {
 	f.Printf("A temperatura em celsius %2.f°C\n", converteCelsius(91))
 	f.Println("O total da area do retangulo:", areaRetangulo(10, 5))
@@ -119,4 +127,5 @@ func main() {
 	f.Println(mediaNumeros([5]int{10, 3, 3, 4, 5}))
 	f.Println(contarNumerosPositivos([]int{1, 2, -1, 3, -2, -2, 1}))
 	f.Println(buscaArray([10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 7))
+	f.Println(inverteArray([10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}))
 }
