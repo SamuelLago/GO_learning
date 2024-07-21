@@ -88,7 +88,7 @@ func mediaNumeros(numeros [5]int) float64 { //Ex.9
 	return float64(total) / float64(len(numeros))
 }
 
-func contarNumerosPositivos(s1 []int) int { // Ex.10
+func contarNumerosPositivos(s1 []int) int { //Ex.10
 	total := 0
 	for i := 0; i < len(s1); i++ {
 		if s1[i] > 0 {
@@ -96,6 +96,15 @@ func contarNumerosPositivos(s1 []int) int { // Ex.10
 		}
 	}
 	return total
+}
+
+func buscaArray(array1 [10]int, num int) string { //Ex.11
+	for i := 0; i < len(array1); i++ {
+		if array1[i] == num {
+			return "Encontrado"
+		}
+	}
+	return "Nao encontrado"
 }
 
 func main() {
@@ -109,4 +118,5 @@ func main() {
 	f.Println(numeroPrimo(11))
 	f.Println(mediaNumeros([5]int{10, 3, 3, 4, 5}))
 	f.Println(contarNumerosPositivos([]int{1, 2, -1, 3, -2, -2, 1}))
+	f.Println(buscaArray([10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 7))
 }
