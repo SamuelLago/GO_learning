@@ -26,9 +26,26 @@ func verificarParImpar(num1 int) string { //Ex.4
 	}
 }
 
+func verificarIdade(idade int) string { //Ex.5
+	if idade < 0 {
+		return "Idade invalida"
+	} else {
+		if idade > 0 && idade < 12 {
+			return "Criança"
+		} else if idade >= 12 && idade < 18 {
+			return "Adolescente"
+		} else if idade >= 18 && idade < 64 {
+			return "Adulto"
+		} else {
+			return "Idoso"
+		}
+	}
+}
+
 func main() {
 	f.Printf("A temperatura em celsius %2.f°C\n", converteCelsius(91))
 	f.Println("O total da area do retangulo:", areaRetangulo(10, 5))
 	f.Println(operacoesBasicas(4, 2))
 	f.Println(verificarParImpar(3))
+	f.Println(verificarIdade(19))
 }
