@@ -103,3 +103,5 @@ for i <= 10 { //Nao tem while
 /*
 ARRAY SLICES MAP
 */
+
+func mediaNumeros(numeros [5]int)

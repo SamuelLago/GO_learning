@@ -2,6 +2,8 @@ package main
 
 import f "fmt" // Pode mudar o nome do import
 
+//Fundamentos
+
 func converteCelsius(temperaturaF float64) float64 { //Ex.1
 	return (temperaturaF - 32) / 1.8
 }
@@ -25,6 +27,8 @@ func verificarParImpar(num1 int) string { //Ex.4
 		return "impar"
 	}
 }
+
+//Estruturas de Controle
 
 func verificarIdade(idade int) string { //Ex.5
 	if idade < 0 {
@@ -74,12 +78,24 @@ func numeroPrimo(num1 int) bool { //Ex.8
 	return true
 }
 
+// Array Slice Map
+
 func mediaNumeros(numeros [5]int) float64 { //Ex.9
 	total := 0
 	for i := 0; i < len(numeros); i++ {
 		total += numeros[i]
 	}
 	return float64(total) / float64(len(numeros))
+}
+
+func contarNumerosPositivos(s1 []int) int { // Ex.10
+	total := 0
+	for i := 0; i < len(s1); i++ {
+		if s1[i] > 0 {
+			total++
+		}
+	}
+	return total
 }
 
 func main() {
@@ -92,4 +108,5 @@ func main() {
 	f.Println(anoBissexto(2020))
 	f.Println(numeroPrimo(11))
 	f.Println(mediaNumeros([5]int{10, 3, 3, 4, 5}))
+	f.Println(contarNumerosPositivos([]int{1, 2, -1, 3, -2, -2, 1}))
 }
