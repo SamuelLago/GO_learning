@@ -1,0 +1,79 @@
+
+//int para String
+fmt.Println("Teste " + strconv.Itoa(123))
+
+//String para int
+num, _ := strconv.Atoi("123")
+fmt.Println(num - 122)
+
+const (
+	a = 1
+	b = 2
+)
+//Sempre tem que utilizar as variaveis
+var (
+	c = 3
+	d = a + b
+)
+
+b, _ := strconv.ParseBool("1") // 0 é False, 1 é True
+if b {
+	fmt.Println("True")
+}
+
+i := 1
+
+var p *int = nil //Ponteiro (nil == null)
+
+p = &i // Pega o endereco da variavel (onde esta alocado na memoria)
+
+*p++ //Desrefenciando (pegando o valor)
+i++
+
+// GO nao tem aritmetica de  ponteiros
+
+fmt.Println(p, *p, i, &i) //0xc000096068 3 3 0xc000096068
+
+fmt.Printf("\n%d %f %.2f %t %s", a, b, b, c, d) //%d numero / %f float / %t boolean / %s string
+fmt.Printf("\n%v %v %v %v", a, b, c, d)         //%v é mais generico
+
+//Numeros inteiros
+fmt.Println(1, 2, 50)
+
+//Sem sinal (positivos) / uint8 / uint16 / uint32 / uint64
+var b byte = 255
+
+//Com sinal / int8 / int16 / int32 / int64
+i1 := m.MaxInt64
+fmt.Println("O maximo do int é", i1)
+
+var i2 rune = 'a' //int32
+
+//Numeros reais / float32 / float64
+var x float32 = 49.99 // Se quiser usar float32, declarar antes
+fmt.Println("O tipo de x é", reflect.TypeOf(x))
+
+//boolean
+bo := true
+fmt.Println("O tipo de bo é", reflect.TypeOf(bo))
+fmt.Println(!bo)
+
+//String
+s1 := "Ola eu sou Samuel"
+fmt.Println(s1 + "!")
+fmt.Println("O tamanho da string é", len(s1))
+
+//String com multiplas linhas
+s2 := `Ola 
+	eu
+	sou
+	Samuel` //O \n é ignorado
+fmt.Println(s2)
+fmt.Println("O tamanho da string é", len(s2))
+
+//Escrever o tipo quando o valor nao for atribuido
+var a int
+var b float64
+var c bool
+var d string
+var e *int //Ponteiro de inteiro

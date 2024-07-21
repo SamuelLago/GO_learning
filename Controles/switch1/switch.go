@@ -24,7 +24,7 @@ func notaParaConceito(n float64) string {
 
 func main() {
 	fmt.Println(notaParaConceito(9.8))
-	fmt.Println(notaParaConceito(6.1))
+	fmt.Println(notaParaConceito(6.9))
 	fmt.Println(notaParaConceito(2.2))
 	fmt.Println(notaParaConceito(11.1))
 }

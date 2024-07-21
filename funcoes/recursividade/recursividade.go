@@ -9,7 +9,7 @@ func fatorial(n int) (int, error) {
 	case n == 0:
 		return 1, nil
 	default:
-		fatorialAnterior, _ := fatorial(n - 1)
+		fatorialAnterior, _ := fatorial(n - 1) //Chama os fatoriais ate o return do 0
 		return n * fatorialAnterior, nil
 	}
 }
