@@ -42,10 +42,26 @@ func verificarIdade(idade int) string { //Ex.5
 	}
 }
 
+func calculadora(num1, num2 float64, caracter byte) float64 { //Ex.6
+	switch caracter {
+	case '+': //case aceita caracter
+		return num1 + num2
+	case '-': //case aceita caracter
+		return num1 - num2
+	case '*': //case aceita caracter
+		return num1 * num2
+	case '/': //case aceita caracter
+		return num1 / num2
+	default:
+		return 0
+	}
+}
+
 func main() {
 	f.Printf("A temperatura em celsius %2.f°C\n", converteCelsius(91))
 	f.Println("O total da area do retangulo:", areaRetangulo(10, 5))
 	f.Println(operacoesBasicas(4, 2))
 	f.Println(verificarParImpar(3))
 	f.Println(verificarIdade(19))
+	f.Println(calculadora(3, 6, '+'))
 }
