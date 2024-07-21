@@ -57,6 +57,14 @@ func calculadora(num1, num2 float64, caracter byte) float64 { //Ex.6
 	}
 }
 
+func anoBissexto(ano int) bool {
+	if ano%4 == 0 && (ano%100 != 0 || ano%400 == 0) {
+		return true
+	} else {
+		return false
+	}
+}
+
 func main() {
 	f.Printf("A temperatura em celsius %2.f°C\n", converteCelsius(91))
 	f.Println("O total da area do retangulo:", areaRetangulo(10, 5))
@@ -64,4 +72,5 @@ func main() {
 	f.Println(verificarParImpar(3))
 	f.Println(verificarIdade(19))
 	f.Println(calculadora(3, 6, '+'))
+	f.Println(anoBissexto(2020))
 }
