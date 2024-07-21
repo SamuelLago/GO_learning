@@ -1,4 +1,6 @@
-
+/*
+FUNDAMENTOS
+*/
 //int para String
 fmt.Println("Teste " + strconv.Itoa(123))
 
@@ -77,3 +79,27 @@ var b float64
 var c bool
 var d string
 var e *int //Ponteiro de inteiro
+
+/*
+	ESTRUTURA DE CONTROLES
+*/
+
+func numeroAleatorio() int {
+	s := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(s)
+	return r.Intn(10)
+}
+
+fallthrough //Pula para o proximo caso
+
+switch { //switch true
+}
+
+for i <= 10 { //Nao tem while
+	fmt.Println(i)
+	i++
+}
+
+/*
+ARRAY SLICES MAP
+*/

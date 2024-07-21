@@ -74,6 +74,14 @@ func numeroPrimo(num1 int) bool { //Ex.8
 	return true
 }
 
+func mediaNumeros(numeros [5]int) float64 { //Ex.9
+	total := 0
+	for i := 0; i < len(numeros); i++ {
+		total += numeros[i]
+	}
+	return float64(total) / float64(len(numeros))
+}
+
 func main() {
 	f.Printf("A temperatura em celsius %2.f°C\n", converteCelsius(91))
 	f.Println("O total da area do retangulo:", areaRetangulo(10, 5))
@@ -83,4 +91,5 @@ func main() {
 	f.Println(calculadora(3, 6, '+'))
 	f.Println(anoBissexto(2020))
 	f.Println(numeroPrimo(11))
+	f.Println(mediaNumeros([5]int{10, 3, 3, 4, 5}))
 }
