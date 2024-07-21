@@ -57,12 +57,21 @@ func calculadora(num1, num2 float64, caracter byte) float64 { //Ex.6
 	}
 }
 
-func anoBissexto(ano int) bool {
+func anoBissexto(ano int) bool { //Ex.7
 	if ano%4 == 0 && (ano%100 != 0 || ano%400 == 0) {
 		return true
 	} else {
 		return false
 	}
+}
+
+func numeroPrimo(num1 int) bool { //Ex.8
+	for i := 2; i < num1; i++ {
+		if num1%i == 0 {
+			return false
+		}
+	}
+	return true
 }
 
 func main() {
@@ -73,4 +82,5 @@ func main() {
 	f.Println(verificarIdade(19))
 	f.Println(calculadora(3, 6, '+'))
 	f.Println(anoBissexto(2020))
+	f.Println(numeroPrimo(11))
 }
