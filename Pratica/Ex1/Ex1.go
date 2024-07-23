@@ -115,6 +115,7 @@ func inverteArray(array1 [10]int) [10]int { //Ex.12
 	return array2
 }
 
+
 func main() {
 	f.Printf("A temperatura em celsius %2.f°C\n", converteCelsius(91))
 	f.Println("O total da area do retangulo:", areaRetangulo(10, 5))
